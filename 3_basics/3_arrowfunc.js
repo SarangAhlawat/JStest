@@ -61,7 +61,7 @@
 // console.log(add2(2, 6));
 
 
-// const add2 = (n1, n2) => n1 + n2  // implicit return
+// const add2 = (n1, n2) => n1 + n2  // implicit return, no need to specify return
 // const add2 = (n1, n2) => (n1 + n2 )  // no need to write return // helpful in react 
 
 

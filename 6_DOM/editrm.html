@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style = "background-color: #212121; color:azure ">
+    <ul class="lang" >
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+<script>
+    // function addLang(name){
+    //     const li = document.createElement('li')
+    //     // const l = document.createTextNode(name) // check?
+    //     // document.body.appendChild(li)
+    //     li.innerHTML = `${name}`  // not optimised - traverse the list at every call, what if the list is of 50 or more li
+    //     document.querySelector('.lang').appendChild(li)
+    //     console.log(li);
+        
+    // }
+    // addLang("Python")
+    // addLang("C++")
+
+
+    function optiLang(lang){ //optimised way
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(lang))
+        document.querySelector('.lang').appendChild(li)
+        // const l1 = document.querySelectorAll(li).setAttr.style etc
+    }
+    optiLang("Hello")
+    optiLang("Hello World!")
+
+
+
+    // edit
+    const secondLang = document.querySelector('li:nth-child(2)')
+    // secondLang.innerHTML = "Helll"  // overwrites
+    const newli = document.createElement("li")  //create and replace - edit
+    newli.textContent = "Heaven"
+    secondLang.replaceWith(newli)
+
+
+    const l2 = document.querySelector('li:first-child')
+    l2.outerHTML = '<li> TypeScript</li>'
+
+
+    //REMOVE
+    const rm = document.querySelector('li:last-child')
+    rm.remove()
+
+</script>
+</html>

@@ -13,10 +13,43 @@
 </head>
 <body class="bg-black">
     <div >
-        <h1 id="first" class="heading">DOM learning with chai
+
+        <div class="parent">
+            <div class="day">Mon</div>
+            <div class="day">Tue</div>
+            <div class="day">Wen</div>
+            <div class="day">Thr</div>
+            <!-- commt. -->
+        </div>
+        <!-- <h1 id="first" class="heading">DOM learning with chai
             <span style="display: none;">Hello Hidden</span>
         </h1>
-        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p> -->
     </div>
 </body>
+<script>
+    const par = document.querySelector('.parent')
+    console.log(par);
+    console.log(par.children); // htmlcollection
+    console.log(par.children[1].innerHTML);
+    
+    for (let i=0; i< par.children.length; i++){
+            console.log(par.children[i].innerHTML);
+        
+    }
+    par.children[1].style.color = "red"
+
+    // const var1 = par.firstElementChild
+    // console.log(var1);
+
+    console.log(par.firstElementChild);
+    // console.log(par.lastElementChild);
+
+const day1 =    document.querySelector('.day')
+    console.log(day1);
+    console.log(day1.parentElement);
+    console.log(day1.nextElementSibling);
+    
+    console.log("NODES:", par.childNodes);
+</script>
 </html>
